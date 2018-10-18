@@ -1,0 +1,7 @@
+<h2> DOGS INDEX PAGE </h2>
+
+<% @dogs.each do |o| %>
+<%= link_to o.breed, dog_path(o) %><br>
+<li> <%= link_to "Edit", edit_dog_path(o) %></li>
+<li><%= link_to "Delete", o, method: :delete %> </li> <br>
+<% end %> 

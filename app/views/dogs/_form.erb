@@ -1,0 +1,15 @@
+<% if flash[:errors] %>
+ERRORS:
+  <% flash[:errors].each do |error| %>
+  <li> <%= error %> </li>
+  <% end %>
+<% end %> <br>
+
+<%= form_for @dog do |f| %>
+<%= f.label :breed %>:
+<%= f.text_field :breed %> <br>
+<%= f.label :weight %>:
+<%= f.number_field :weight %> <br>
+Owner Name: <%= f.collection_select(:owner_id, @owners, :id, :name) %> <br>
+<%= f.submit %>
+<% end %>

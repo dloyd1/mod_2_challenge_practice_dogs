@@ -1,0 +1,7 @@
+<h2> OWNERS INDEX PAGE </h2>
+
+<% @owners.each do |o| %>
+<%= link_to o.name, owner_path(o) %> <br>
+<li> <%= link_to "Edit", edit_owner_path(o) %></li>
+<li><%= link_to "Delete", o, method: :delete %> </li> <br>
+<% end %>

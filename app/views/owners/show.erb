@@ -1,0 +1,8 @@
+<h2> OWNER DETAILS </h2>
+
+Name: <%= @owner.name  %> <br>
+Age: <%= @owner.age  %> <br>
+Dogs:
+<% @own_d.each do |o| %>
+<li> <%= o.breed %> </li>
+<% end %>
